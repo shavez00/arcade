@@ -6,8 +6,8 @@ var Enemy = function(x, y, speed) {
     this.sprite = 'images/enemy-bug.png';
 };
 
-Enemy.prototype.update = function(dt) {
-    this.x =+ this.speed * dt;
+Enemy.prototype.update = function (dt) {
+    this.x += this.speed * dt;
     
     if (this.x > 510) {
         this.x = -50;
@@ -42,23 +42,23 @@ Player.prototype.render = function() {
 };
 
 Player.prototype.handleInput = function (keyPress) {
-    if (keyPress == 'left' && this.x > 0) {
+    if (keyPress === 'left' && this.x > 0) {
         this.x -= 102;
     };
-    if (keyPress == 'right' && this.x < 405) {
+    if (keyPress === 'right' && this.x < 405) {
         this.x += 102;
     };
-    if (keyPress == 'up' && this.y > 0) {
+    if (keyPress === 'up' && this.y > 0) {
         this.y -= 83;
     };
-    if (keyPress == 'down' && this.y < 405) {
+    if (keyPress === 'down' && this.y < 405) {
         this.y += 83;
     };
     if (this.y < 0) {
         setTimeout(function () {
             player.x = 202;
             player.y = 405;
-        }, 600)
+        }, 600);
     };
 };
 
@@ -66,7 +66,7 @@ var allEnemies = [];
 var enemyLocation = [63, 147, 230];
 
 enemyLocation.forEach(function (locationY) {
-    enemy = new Enemy(0, locationY, -200);
+    enemy = new Enemy(0, locationY, 200);
     allEnemies.push(enemy);
 });
 
