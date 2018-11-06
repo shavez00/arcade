@@ -48,18 +48,16 @@ Player.prototype.handleInput = function (keyPress) {
     if (keyPress === 'right' && this.x < 405) {
         this.x += 102;
     };
-    if (keyPress === 'up' && this.y > 0) {
+    if (keyPress === 'up' && this.y > -20) {
         this.y -= 83;
     };
     if (keyPress === 'down' && this.y < 405) {
         this.y += 83;
     };
-    if (this.y < 0) {
-        setTimeout(function () {
-            player.x = 202;
-            player.y = 405;
-        }, 600);
-    };
+   if (this.y < -10) { 
+       this.x = 202; 
+       this.y = 405;
+   };
 };
 
 var allEnemies = [];
