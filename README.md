@@ -1,4 +1,4 @@
-# Project Title
+# Udacity FEND Classic Arcade Game
 
 This is my Udacity Nano-degree project to re-create a classic arcade game (Frogger) using Javascript.
 
